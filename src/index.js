@@ -1,3 +1,5 @@
+import './styles/index.scss';
+
 const test = {
 	hey: 1,
 	ggg: 88,
