@@ -30,7 +30,10 @@ module.exports = {
 					{
 						loader: "babel-loader",
 						options: {
-							presets: ["@babel/preset-env"],
+							presets: [
+								"@babel/preset-env",
+								["@babel/preset-react", { runtime: "automatic" }],
+							],
 						},
 					},
 				],
@@ -39,6 +42,10 @@ module.exports = {
 	},
 
 	plugins: [new MiniCssExtractPlugin()],
+
+	resolve: {
+		extensions: ['.js', '.jsx'],
+	},
 
 	devtool: "source-map",
 	devServer: {
